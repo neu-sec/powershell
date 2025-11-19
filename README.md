@@ -1,12 +1,16 @@
 # PowerShell Utility Scripts
 
-A curated collection of PowerShell scripts for system administration, network monitoring, and automation tasks.
+A curated collection of PowerShell scripts for system administration, network monitoring, security scanning, and automation tasks.
 
 ## 📋 Overview
 
-This repository contains practical PowerShell utilities designed to simplify common administrative workflows and provide quick insights into system behavior.
+This repository contains practical PowerShell utilities designed to simplify common administrative workflows, enhance security posture, and provide quick insights into system behavior.
 
 ## 🚀 Scripts
+
+### Security & Vulnerability Management
+
+- **[CVE-2025-59287.ps1](CVE-2025-59287.ps1)** - Scan Active Directory for WSUS servers potentially vulnerable to CVE-2025-59287
 
 ### Network & Connectivity
 
@@ -24,6 +28,12 @@ Most scripts can be executed directly without parameters:
 
 ```powershell
 .\ScriptName.ps1
+```
+
+Some scripts support additional parameters for enhanced functionality:
+
+```powershell
+.\CVE-2025-59287.ps1 -ScanAllServers -VerboseOutput -OutputPath "C:\Temp\results.csv"
 ```
 
 Some scripts may require administrative privileges for full functionality. Check individual script documentation for specific requirements.
@@ -46,6 +56,7 @@ Get-Help .\ScriptName.ps1 -Full
 
 - Windows PowerShell 5.1 or PowerShell 7+
 - Administrative privileges may be required for certain scripts
+- Active Directory module (for AD-related scripts)
 - Internet connectivity for network testing utilities
 
 ## 📝 License
